@@ -11,62 +11,35 @@ import Foundation
 
 class DataManager: NSObject {
     
-    func createPost(post: Post) {
-        var jsonString : NSString = ""
+    func changeMetadataAsync(newMetadata: String) {
+        var request = URLRequest(url: URL(string: "https://rndr-cal-hacks.azurewebsites.net/target")!)
+        request.httpMethod = "POST"
         
-        // create json files
-        var json : [String : AnyObject] = [
-            "author" : post.author, "type" : post.type as AnyObject,
-            "url" : post.url, "location" : post.location as AnyObject,
-            "marker" : post.marker
-        ]
+        let para:NSMutableDictionary = NSMutableDictionary()
+        para.setValue("d440a2766ab3442297abf6f89807a15d", forKey: "id")
+        para.setValue(newMetadata, forKey: "metadata")
+        let jsonData = try! JSONSerialization.data(withJSONObject: para)
+        let jsonString = NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue) as! String
+        print(jsonString)
         
-        do {
-            let jsonData = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
-            // here "jsonData" is the dictionary encoded in JSON data
-            
-            let decoded = try JSONSerialization.jsonObject(with: jsonData, options: [])
-            // here "decoded" is of type `Any`, decoded from JSON data
-            print(decoded)
-            
-            // you can now cast it with the right type
-            if let dictFromJSON = decoded as? [String:String] {
-                // use dictFromJSON
-            }
-            
-            jsonString = NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue)!
-            
-            // do something with json string here
-            
-        } catch {
-            print(error.localizedDescription)
-        }
-        
+        //let postString = "{\"id\":\"d440a2766ab3442297abf6f89807a15d\", \"metadata\":\"" + newMetadata + "\"}"
+        //print(postString)
+        request.httpBody = jsonData
         
         let headers = [
-            "content-type": "application/json",
-            "cache-control": "no-cache",
-            "postman-token": "4a15bf02-cfb9-de37-bfbd-c373ec34157d"
+            "Content-Type": "application/json; charset=utf-8"
         ]
-        
-        var request = NSMutableURLRequest(url: NSURL(string: "https://rndrapp.herokuapp.com/post")! as URL,
-                                          cachePolicy: .useProtocolCachePolicy,
-                                          timeoutInterval: 10.0)
-        request.httpMethod = "POST"
         request.allHTTPHeaderFields = headers
-        
         let session = URLSession.shared
-        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-            if (error != nil) {
-                print(error)
-            } else {
-                let httpResponse = response as? HTTPURLResponse
-                print(httpResponse)
-            }
-        })
         
-        dataTask.resume()
+        session.dataTask(with: request) {data, response, err in
+            print("Done!")
+            print(data!)
+            print(response!)
+            }.resume()
+
     }
+
     
     func retieveNearbyPosts() {
         // Get current location

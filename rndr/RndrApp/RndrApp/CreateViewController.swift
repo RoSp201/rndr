@@ -15,9 +15,16 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
     //let imagePicker = UIImagePickerController()
 
     @IBAction func postButtonPressed(_ sender: Any) {
-        
+        let dataManager = DataManager()
+        dataManager.changeMetadataAsync(newMetadata: "1")
     }
     
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        let dataManager = DataManager()
+        dataManager.changeMetadataAsync(newMetadata: "0")
+    }
+    @IBAction func letdataManagerDataManagerpostButtonPressed(_ sender: Any) {
+    }
     var imagePicker = UIImagePickerController()
     
     @IBAction func importPhotoButtonPressed(_ sender: Any) {

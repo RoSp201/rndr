@@ -14,8 +14,9 @@ class ExploreViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // get current location from user
-        var locManager = CLLocationManager()
+        let locManager = CLLocationManager()
         locManager.delegate = self
         locManager.requestAlwaysAuthorization()
         
