@@ -286,7 +286,7 @@
 				TargetAttributes = {
 					3D09A4691DD7A93B0062D4F5 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = KPNMF9RGJN;
+						DevelopmentTeam = H29936976N;
 						ProvisioningStyle = Automatic;
 					};
 					3D09A47F1DD7A93C0062D4F5 = {
@@ -661,11 +661,11 @@
 			baseConfigurationReference = 0A129B962E21FBC96C9B1317 /* Pods-RndrApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = KPNMF9RGJN;
+				DEVELOPMENT_TEAM = H29936976N;
 				INFOPLIST_FILE = RndrApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = RndrApp;
+				PRODUCT_BUNDLE_IDENTIFIER = RndrApp.a.b;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -676,13 +676,13 @@
 			baseConfigurationReference = B9C385F69DE2C34F6243AFAF /* Pods-RndrApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = KPNMF9RGJN;
+				DEVELOPMENT_TEAM = H29936976N;
 				"HEADER_SEARCH_PATHS[arch=*]" = /Users/William/Desktop/Projects/rndr/rndr/build/include;
 				INFOPLIST_FILE = RndrApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"LIBRARY_SEARCH_PATHS[arch=*]" = /Users/William/Desktop/Projects/rndr/rndr/build/lib;
-				PRODUCT_BUNDLE_IDENTIFIER = RndrApp;
+				PRODUCT_BUNDLE_IDENTIFIER = RndrApp.a.b;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

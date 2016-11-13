@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -54,7 +54,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="7F0FDFF8-52D5-4433-9F3D-CE2534DCFB0B" translatesAutoresizingMaskIntoConstraints="NO" id="Ez5-TX-93M">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="D08787EC-CA40-401B-AA5F-E4314C203774" translatesAutoresizingMaskIntoConstraints="NO" id="Ez5-TX-93M">
                                                     <rect key="frame" x="18" y="8" width="53" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43" id="3HV-0r-n8f"/>
@@ -88,7 +88,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="0A7AA994-9122-48FB-A04B-2D01440E0B9D" translatesAutoresizingMaskIntoConstraints="NO" id="XAK-7k-6O4">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="3EE05E36-0177-485E-90FD-D61BF7DF9B14" translatesAutoresizingMaskIntoConstraints="NO" id="XAK-7k-6O4">
                                                     <rect key="frame" x="18" y="8" width="53" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43" id="ll8-4Q-InP"/>
@@ -139,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vy9-4Y-pe3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="840.79999999999995" y="-643.62818590704649"/>
+            <point key="canvasLocation" x="1209" y="-683"/>
         </scene>
         <!--Create Post-->
         <scene sceneID="rCL-w3-kqC">
@@ -189,11 +189,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvY-Cx-Vql">
-                                <rect key="frame" x="163" y="539" width="49" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5V-8v-kPa">
+                                <rect key="frame" x="95" y="539" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="qCw-lh-mGE" eventType="touchUpInside" id="KUh-4g-mB9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvY-Cx-Vql">
+                                <rect key="frame" x="230" y="539" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Post"/>
                                 <connections>
+                                    <action selector="letdataManagerDataManagerpostButtonPressed:" destination="qCw-lh-mGE" eventType="touchUpInside" id="J9P-gH-wGh"/>
                                     <action selector="postButtonPressed:" destination="qCw-lh-mGE" eventType="touchUpInside" id="juj-QX-Hel"/>
                                 </connections>
                             </button>
@@ -231,7 +241,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="0A7AA994-9122-48FB-A04B-2D01440E0B9D" width="512" height="512">
+        <image name="3EE05E36-0177-485E-90FD-D61BF7DF9B14" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -9063,7 +9073,7 @@ fwAIE4cACBOUAAgTmQAIE5sACBOdAAgTogAIE6oACBOtAAgTsgAIE7oACBO9AAgTzwAIE9IACBPXAAAA
 AAAABAEAAAAAAAAAPgAAAAAAAAAAAAAAAAAIE9k
 </mutableData>
         </image>
-        <image name="7F0FDFF8-52D5-4433-9F3D-CE2534DCFB0B" width="512" height="512">
+        <image name="D08787EC-CA40-401B-AA5F-E4314C203774" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
