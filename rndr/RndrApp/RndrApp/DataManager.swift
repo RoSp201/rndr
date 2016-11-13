@@ -18,9 +18,27 @@ class DataManager: NSObject {
             "marker" : post.marker
         ]
         
-        // todo: fix me
-        //let jsonData = try JSONSerialization.data(withJSONObject: dic, options: .prettyPrinted)
-        
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: json, options: .prettyPrinted)
+            // here "jsonData" is the dictionary encoded in JSON data
+            
+            let decoded = try JSONSerialization.jsonObject(with: jsonData, options: [])
+            // here "decoded" is of type `Any`, decoded from JSON data
+            print(decoded)
+            
+            // you can now cast it with the right type
+            if let dictFromJSON = decoded as? [String:String] {
+                // use dictFromJSON
+            }
+            
+            let jsonString = NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue) as! String
+            jsonString
+            
+            // do something with json string here
+            
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     func retieveNearbyPosts() {

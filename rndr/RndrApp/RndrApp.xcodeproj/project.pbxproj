@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D838080369EB56C9F4DA6CE /* Pods_RndrAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A86E48C7A913AFE4D4CF36 /* Pods_RndrAppTests.framework */; };
 		3D09A46E1DD7A93C0062D4F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09A46D1DD7A93C0062D4F5 /* AppDelegate.swift */; };
 		3D09A4751DD7A93C0062D4F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D09A4731DD7A93C0062D4F5 /* Main.storyboard */; };
 		3D09A4771DD7A93C0062D4F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D09A4761DD7A93C0062D4F5 /* Assets.xcassets */; };
@@ -26,6 +27,11 @@
 		3D09A4BE1DD7DC2C0062D4F5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09A4BD1DD7DC2C0062D4F5 /* Post.swift */; };
 		3D09A4C01DD7DCBC0062D4F5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09A4BF1DD7DCBC0062D4F5 /* DataManager.swift */; };
 		3D09A4C41DD8023A0062D4F5 /* StatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09A4C31DD8023A0062D4F5 /* StatusTableViewCell.swift */; };
+		3D09A4C61DD823760062D4F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D09A4C51DD823760062D4F5 /* GoogleService-Info.plist */; };
+		3D09A4C71DD823760062D4F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D09A4C51DD823760062D4F5 /* GoogleService-Info.plist */; };
+		3D09A4C81DD823760062D4F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D09A4C51DD823760062D4F5 /* GoogleService-Info.plist */; };
+		6DFCEE645EDB6C1BDC8A996E /* Pods_RndrAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A223BC9562893B5C56D6EB8 /* Pods_RndrAppUITests.framework */; };
+		6E0C69926A340DE4E6B3A033 /* Pods_RndrApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A28E147F2B7869286BD938C /* Pods_RndrApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A129B962E21FBC96C9B1317 /* Pods-RndrApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RndrApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RndrApp/Pods-RndrApp.debug.xcconfig"; sourceTree = "<group>"; };
+		1A28E147F2B7869286BD938C /* Pods_RndrApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RndrApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2525CDF6C44A7418A6C952ED /* Pods-RndrAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RndrAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RndrAppTests/Pods-RndrAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		2A223BC9562893B5C56D6EB8 /* Pods_RndrAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RndrAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D09A46A1DD7A93C0062D4F5 /* RndrApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RndrApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D09A46D1DD7A93C0062D4F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3D09A4741DD7A93C0062D4F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,6 +81,12 @@
 		3D09A4BD1DD7DC2C0062D4F5 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		3D09A4BF1DD7DCBC0062D4F5 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		3D09A4C31DD8023A0062D4F5 /* StatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusTableViewCell.swift; path = ../StatusTableViewCell.swift; sourceTree = "<group>"; };
+		3D09A4C51DD823760062D4F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		79A86E48C7A913AFE4D4CF36 /* Pods_RndrAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RndrAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A05872F351B1BB8ED8EFA53A /* Pods-RndrAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RndrAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RndrAppTests/Pods-RndrAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B4FE9E35FF76DC9B5579D2D7 /* Pods-RndrAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RndrAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RndrAppUITests/Pods-RndrAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B9C385F69DE2C34F6243AFAF /* Pods-RndrApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RndrApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RndrApp/Pods-RndrApp.release.xcconfig"; sourceTree = "<group>"; };
+		DAFB0B5EAD5883E10358B554 /* Pods-RndrAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RndrAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RndrAppUITests/Pods-RndrAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E0C69926A340DE4E6B3A033 /* Pods_RndrApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D838080369EB56C9F4DA6CE /* Pods_RndrAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DFCEE645EDB6C1BDC8A996E /* Pods_RndrAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +120,7 @@
 		3D09A4611DD7A93B0062D4F5 = {
 			isa = PBXGroup;
 			children = (
+				3D09A4C51DD823760062D4F5 /* GoogleService-Info.plist */,
 				3D09A4B71DD7BB720062D4F5 /* ExploreViewController.swift */,
 				3D09A4A11DD7ABEB0062D4F5 /* VuforiaSamples-6-0-120 */,
 				3D09A49F1DD7A9D60062D4F5 /* build */,
@@ -108,6 +128,8 @@
 				3D09A4831DD7A93C0062D4F5 /* RndrAppTests */,
 				3D09A48E1DD7A93C0062D4F5 /* RndrAppUITests */,
 				3D09A46B1DD7A93C0062D4F5 /* Products */,
+				9A2D5A6F1A039CDE58C7EF04 /* Pods */,
+				5AC3446AEB5D255BA2635911 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +183,29 @@
 			path = RndrAppUITests;
 			sourceTree = "<group>";
 		};
+		5AC3446AEB5D255BA2635911 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A28E147F2B7869286BD938C /* Pods_RndrApp.framework */,
+				79A86E48C7A913AFE4D4CF36 /* Pods_RndrAppTests.framework */,
+				2A223BC9562893B5C56D6EB8 /* Pods_RndrAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A2D5A6F1A039CDE58C7EF04 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A129B962E21FBC96C9B1317 /* Pods-RndrApp.debug.xcconfig */,
+				B9C385F69DE2C34F6243AFAF /* Pods-RndrApp.release.xcconfig */,
+				A05872F351B1BB8ED8EFA53A /* Pods-RndrAppTests.debug.xcconfig */,
+				2525CDF6C44A7418A6C952ED /* Pods-RndrAppTests.release.xcconfig */,
+				B4FE9E35FF76DC9B5579D2D7 /* Pods-RndrAppUITests.debug.xcconfig */,
+				DAFB0B5EAD5883E10358B554 /* Pods-RndrAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D09A4941DD7A93C0062D4F5 /* Build configuration list for PBXNativeTarget "RndrApp" */;
 			buildPhases = (
+				65EFE5E2283EBF1B1D7AA84E /* [CP] Check Pods Manifest.lock */,
 				3D09A4661DD7A93B0062D4F5 /* Sources */,
 				3D09A4671DD7A93B0062D4F5 /* Frameworks */,
 				3D09A4681DD7A93B0062D4F5 /* Resources */,
+				675BF3435F52ADB9605E2E3C /* [CP] Embed Pods Frameworks */,
+				5F9F7C39802646F31AA90F12 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,9 +233,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D09A4971DD7A93C0062D4F5 /* Build configuration list for PBXNativeTarget "RndrAppTests" */;
 			buildPhases = (
+				8F28A263C0999944CD3E9054 /* [CP] Check Pods Manifest.lock */,
 				3D09A47C1DD7A93C0062D4F5 /* Sources */,
 				3D09A47D1DD7A93C0062D4F5 /* Frameworks */,
 				3D09A47E1DD7A93C0062D4F5 /* Resources */,
+				575CC6DBAB6563E9B682BA1D /* [CP] Embed Pods Frameworks */,
+				891C459634CDEF3197BCEE8D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,9 +254,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D09A49A1DD7A93C0062D4F5 /* Build configuration list for PBXNativeTarget "RndrAppUITests" */;
 			buildPhases = (
+				63817D5AB24D0430E15DA8CF /* [CP] Check Pods Manifest.lock */,
 				3D09A4871DD7A93C0062D4F5 /* Sources */,
 				3D09A4881DD7A93C0062D4F5 /* Frameworks */,
 				3D09A4891DD7A93C0062D4F5 /* Resources */,
+				E983D4D3FB76DF498447DC9B /* [CP] Embed Pods Frameworks */,
+				B04FC261E1F56FE97468F770 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -276,6 +330,7 @@
 				3D09A4771DD7A93C0062D4F5 /* Assets.xcassets in Resources */,
 				3D09A4751DD7A93C0062D4F5 /* Main.storyboard in Resources */,
 				3D09A4AA1DD7B2BD0062D4F5 /* trending.jpeg in Resources */,
+				3D09A4C61DD823760062D4F5 /* GoogleService-Info.plist in Resources */,
 				3D09A4AC1DD7B2C50062D4F5 /* friends.png in Resources */,
 				3D09A4BC1DD7D2B00062D4F5 /* trending_png.png in Resources */,
 			);
@@ -285,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D09A4C71DD823760062D4F5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,10 +348,149 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D09A4C81DD823760062D4F5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		575CC6DBAB6563E9B682BA1D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RndrAppTests/Pods-RndrAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F9F7C39802646F31AA90F12 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RndrApp/Pods-RndrApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63817D5AB24D0430E15DA8CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		65EFE5E2283EBF1B1D7AA84E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		675BF3435F52ADB9605E2E3C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RndrApp/Pods-RndrApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		891C459634CDEF3197BCEE8D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RndrAppTests/Pods-RndrAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F28A263C0999944CD3E9054 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B04FC261E1F56FE97468F770 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RndrAppUITests/Pods-RndrAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E983D4D3FB76DF498447DC9B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RndrAppUITests/Pods-RndrAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3D09A4661DD7A93B0062D4F5 /* Sources */ = {
@@ -459,6 +654,7 @@
 		};
 		3D09A4951DD7A93C0062D4F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A129B962E21FBC96C9B1317 /* Pods-RndrApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KPNMF9RGJN;
@@ -473,6 +669,7 @@
 		};
 		3D09A4961DD7A93C0062D4F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9C385F69DE2C34F6243AFAF /* Pods-RndrApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = KPNMF9RGJN;
@@ -489,6 +686,7 @@
 		};
 		3D09A4981DD7A93C0062D4F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A05872F351B1BB8ED8EFA53A /* Pods-RndrAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -503,6 +701,7 @@
 		};
 		3D09A4991DD7A93C0062D4F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2525CDF6C44A7418A6C952ED /* Pods-RndrAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -517,6 +716,7 @@
 		};
 		3D09A49B1DD7A93C0062D4F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4FE9E35FF76DC9B5579D2D7 /* Pods-RndrAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = RndrAppUITests/Info.plist;
@@ -530,6 +730,7 @@
 		};
 		3D09A49C1DD7A93C0062D4F5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAFB0B5EAD5883E10358B554 /* Pods-RndrAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = RndrAppUITests/Info.plist;
