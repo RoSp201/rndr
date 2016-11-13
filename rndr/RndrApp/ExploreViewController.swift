@@ -28,18 +28,24 @@ class ExploreViewController: UIViewController, CLLocationManagerDelegate {
             currentLocation = locManager.location
         }
         else {
-            currentLocation = CLLocation(latitude: -33.86, longitude: 151.20)
+            currentLocation = CLLocation(latitude: 37.868485, longitude: -122.26385)
         }
         
         // Create a GMSCameraPosition that tells the map to display the
         // coordinate -33.86,151.20 at zoom level 6.
-        let camera = GMSCameraPosition.camera(withLatitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude, zoom: 8.0)
+        let camera = GMSCameraPosition.camera(withLatitude: currentLocation.coordinate.latitude, longitude: currentLocation.coordinate.longitude, zoom: 15.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.isMyLocationEnabled = true
         view = mapView
         
         // todo: query the database and get the location of posts
-        var markerPositions : [CLLocation] = [currentLocation!]
+        let markerPositions : [CLLocation] = [CLLocation(latitude: 37.868485, longitude: -122.263885),
+                                              CLLocation(latitude: 37.862127, longitude: -122.258856),
+                                              CLLocation(latitude: 37.868725, longitude: -122.259274),
+                                              CLLocation(latitude: 37.866082, longitude: -122.248105),
+                                              CLLocation(latitude: 37.861413, longitude: -122.258043),
+                                              CLLocation(latitude: 37.861426, longitude:  -122.257646),
+                                              CLLocation(latitude: 37.868485, longitude: -122.263885)]
         
         for var position in markerPositions {
             // Creates a marker in the center of the map.
