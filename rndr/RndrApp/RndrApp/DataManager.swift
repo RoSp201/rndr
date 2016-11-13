@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class DataManager: NSObject {
     
@@ -68,28 +69,33 @@ class DataManager: NSObject {
     }
     
     func retieveNearbyPosts() {
-        // todo: implement function to retrieve from db
-        // get current location
+        // Get current location
+        // Right now it's hardcoded.
+        let lat = 37.861681
+        let lon = -122.258464
+        
         let headers = [
-            "cache-control": "no-cache",
-            "postman-token": "56af9e0b-e820-e7c5-917b-027cd21ae5f8"
+            "cache-control": "no-cache"
         ]
         
-        var request = NSMutableURLRequest(url: URL(string: "https://rndrapp.herokuapp.com/posts/:lat/:lon")!, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 10.0)
-        request.httpMethod = "GET"
-        request.allHTTPHeaderFields = headers
+        let url = URL(string: "https://rndrapp.herokuapp.com/posts/" + String(lat) + "/" + String(lon))
         
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-            if (error != nil) {
+        
+        let task = URLSession.shared.dataTask(with: url!) { data, response, error in
+            guard error == nil else {
                 print(error)
-            } else {
-                let httpResponse = response as? HTTPURLResponse
-                print(httpResponse)
+                return
             }
-        })
+            guard let data = data else {
+                print("Data is empty")
+                return
+            }
+            
+            let json = try! JSONSerialization.jsonObject(with: data, options: [])
+            print(json)
+        }
         
-        dataTask.resume()
+        task.resume()
     }
 }
 
