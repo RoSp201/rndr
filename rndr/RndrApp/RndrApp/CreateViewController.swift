@@ -11,37 +11,42 @@ import UIKit
 class CreateViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var postImageView: UIImageView!
+    
+    //let imagePicker = UIImagePickerController()
 
     @IBAction func postButtonPressed(_ sender: Any) {
         
     }
     
+    var imagePicker = UIImagePickerController()
+    
     @IBAction func importPhotoButtonPressed(_ sender: Any) {
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .photoLibrary
-        
-        present(imagePicker, animated: true, completion: nil)
-    }
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            postImageView.contentMode = .scaleAspectFit
-            postImageView.image = pickedImage
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
+            imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
         }
-    
-        dismiss(animated: true, completion: nil)
     }
-    
-    let imagePicker = UIImagePickerController()
-    
-    
-    @IBOutlet weak var postTextField: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-        // Do any additional setup after loading the view.
     }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        postImageView.image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        dismiss(animated: true, completion: nil)
+        print((info))
+    }
+    
+    @IBOutlet weak var postTextField: UITextView!
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
