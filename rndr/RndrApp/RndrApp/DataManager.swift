@@ -23,7 +23,8 @@ class DataManager: NSObject {
         
     }
     
-    func retieveNearbyPosts(post : Post) {
+    func retieveNearbyPosts() {
         // todo: implement function to retrieve from db
+        // get current location
     }
 }

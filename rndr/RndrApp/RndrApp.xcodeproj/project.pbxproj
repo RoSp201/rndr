@@ -25,6 +25,7 @@
 		3D09A4BC1DD7D2B00062D4F5 /* trending_png.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D09A4BB1DD7D2B00062D4F5 /* trending_png.png */; };
 		3D09A4BE1DD7DC2C0062D4F5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09A4BD1DD7DC2C0062D4F5 /* Post.swift */; };
 		3D09A4C01DD7DCBC0062D4F5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09A4BF1DD7DCBC0062D4F5 /* DataManager.swift */; };
+		3D09A4C41DD8023A0062D4F5 /* StatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09A4C31DD8023A0062D4F5 /* StatusTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		3D09A4BB1DD7D2B00062D4F5 /* trending_png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trending_png.png; sourceTree = "<group>"; };
 		3D09A4BD1DD7DC2C0062D4F5 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		3D09A4BF1DD7DCBC0062D4F5 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		3D09A4C31DD8023A0062D4F5 /* StatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusTableViewCell.swift; path = ../StatusTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		3D09A46C1DD7A93C0062D4F5 /* RndrApp */ = {
 			isa = PBXGroup;
 			children = (
+				3D09A4C31DD8023A0062D4F5 /* StatusTableViewCell.swift */,
 				3D09A4B91DD7CD600062D4F5 /* StatusViewController.swift */,
 				3D09A4AF1DD7B97F0062D4F5 /* MainTabBarController.swift */,
 				3D09A46D1DD7A93C0062D4F5 /* AppDelegate.swift */,
@@ -302,6 +305,7 @@
 				3D09A4B41DD7BACE0062D4F5 /* CreateViewController.swift in Sources */,
 				3D09A4B81DD7BB720062D4F5 /* ExploreViewController.swift in Sources */,
 				3D09A4B01DD7B97F0062D4F5 /* MainTabBarController.swift in Sources */,
+				3D09A4C41DD8023A0062D4F5 /* StatusTableViewCell.swift in Sources */,
 				3D09A4C01DD7DCBC0062D4F5 /* DataManager.swift in Sources */,
 				3D09A4BE1DD7DC2C0062D4F5 /* Post.swift in Sources */,
 				3D09A46E1DD7A93C0062D4F5 /* AppDelegate.swift in Sources */,

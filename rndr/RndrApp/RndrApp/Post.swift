@@ -18,8 +18,7 @@ class Post: NSObject {
         case object
     }
     
-    init(author : NSString, time : Int, type : PostType, text: NSString, url : NSString, location : [Double], marker : NSString)
-    {
+    init(author : NSString, time : Int, type : PostType, text: NSString, url : NSString, location : [Double], marker : NSString) {
         self.author = author
         self.time = time
         self.type = type
@@ -30,7 +29,7 @@ class Post: NSObject {
     }
     
     var author : NSString
-    var time : Int
+    var time : Int?
     var type : PostType
     var text : NSString
     var url : NSString
