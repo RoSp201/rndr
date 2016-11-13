@@ -33,7 +33,6 @@
         <!--Item-->
         <scene sceneID="dQs-4I-ITy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vy9-4Y-pe3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="d8F-Em-hiV" customClass="StatusViewController" customModule="RndrApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NIf-Sq-502"/>
@@ -43,17 +42,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dRl-uZ-QvN">
-                                <rect key="frame" x="127" y="12" width="121" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="" image="trending_png.png"/>
-                                    <segment title="" image="friends.png"/>
-                                </segments>
-                                <connections>
-                                    <action selector="segmentedControlChanged:" destination="d8F-Em-hiV" eventType="valueChanged" id="eH5-mT-Sas"/>
-                                </connections>
-                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tfm-dV-fiI">
                                 <rect key="frame" x="0.0" y="58" width="375" height="560"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -66,7 +54,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="386412AB-8AB4-4762-A9F8-E2BB3D3BE52B" translatesAutoresizingMaskIntoConstraints="NO" id="Ez5-TX-93M">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="7E7A0BFA-8947-4010-A11D-97C4C6DCEA06" translatesAutoresizingMaskIntoConstraints="NO" id="Ez5-TX-93M">
                                                     <rect key="frame" x="18" y="8" width="53" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43" id="3HV-0r-n8f"/>
@@ -100,7 +88,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="3F777B36-AC12-4873-BF9C-457D63A06DF0" translatesAutoresizingMaskIntoConstraints="NO" id="XAK-7k-6O4">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" image="D0F0E8E0-FD9A-4151-8301-942B52899DEC" translatesAutoresizingMaskIntoConstraints="NO" id="XAK-7k-6O4">
                                                     <rect key="frame" x="18" y="8" width="53" height="43"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="43" id="ll8-4Q-InP"/>
@@ -129,15 +117,27 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ekY-IE-pzp">
+                                <rect key="frame" x="127" y="20" width="121" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Trending"/>
+                                    <segment title="Friends"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlToggled:" destination="d8F-Em-hiV" eventType="valueChanged" id="wKe-Xk-SyH"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="UCq-h6-27L"/>
                     <connections>
-                        <outlet property="segmentedControl" destination="dRl-uZ-QvN" id="Qmk-wM-Gd6"/>
+                        <outlet property="segmentedControl" destination="ekY-IE-pzp" id="UJY-h7-PlK"/>
                         <outlet property="tableView" destination="tfm-dV-fiI" id="Lbg-dW-Kiq"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vy9-4Y-pe3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="840.79999999999995" y="-643.62818590704649"/>
         </scene>
@@ -173,8 +173,16 @@
                                 <rect key="frame" x="67" y="119" width="240" height="246"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tX1-25-hEF">
+                                <rect key="frame" x="168" y="373" width="39" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Import Photo" image="camera"/>
+                                <connections>
+                                    <action selector="importPhotoButtonPressed:" destination="qCw-lh-mGE" eventType="touchUpInside" id="np9-hS-Pbw"/>
+                                </connections>
+                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wfs-q9-LSF">
-                                <rect key="frame" x="67" y="395" width="240" height="128"/>
+                                <rect key="frame" x="67" y="403" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -182,19 +190,11 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvY-Cx-Vql">
-                                <rect key="frame" x="163" y="531" width="49" height="30"/>
+                                <rect key="frame" x="163" y="539" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Post"/>
                                 <connections>
                                     <action selector="postButtonPressed:" destination="qCw-lh-mGE" eventType="touchUpInside" id="juj-QX-Hel"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tX1-25-hEF">
-                                <rect key="frame" x="142" y="373" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Import Photo"/>
-                                <connections>
-                                    <action selector="importPhotoButtonPressed:" destination="qCw-lh-mGE" eventType="touchUpInside" id="np9-hS-Pbw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -232,7 +232,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="386412AB-8AB4-4762-A9F8-E2BB3D3BE52B" width="512" height="512">
+        <image name="7E7A0BFA-8947-4010-A11D-97C4C6DCEA06" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -9064,7 +9064,7 @@ fwAIE4cACBOUAAgTmQAIE5sACBOdAAgTogAIE6oACBOtAAgTsgAIE7oACBO9AAgTzwAIE9IACBPXAAAA
 AAAABAEAAAAAAAAAPgAAAAAAAAAAAAAAAAAIE9k
 </mutableData>
         </image>
-        <image name="3F777B36-AC12-4873-BF9C-457D63A06DF0" width="512" height="512">
+        <image name="D0F0E8E0-FD9A-4151-8301-942B52899DEC" width="512" height="512">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOjtYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISgrLjQ3VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -17896,7 +17896,6 @@ fwAIE4cACBOUAAgTmQAIE5sACBOdAAgTogAIE6oACBOtAAgTsgAIE7oACBO9AAgTzwAIE9IACBPXAAAA
 AAAABAEAAAAAAAAAPgAAAAAAAAAAAAAAAAAIE9k
 </mutableData>
         </image>
-        <image name="friends.png" width="300" height="150"/>
-        <image name="trending_png.png" width="142" height="90"/>
+        <image name="camera" width="48" height="48"/>
     </resources>
 </document>

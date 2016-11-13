@@ -23,7 +23,6 @@ var updates : [Update] = [Update(name : "Will", distance: 2.0), Update(name : "G
 class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var trendingSelected = true
     
-    @IBOutlet weak var segmentedControl: UISegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +43,9 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func segmentedControlChanged(_ sender: UISegmentedControl) {
-        
-        // todo: create a function that updates table view with a different data source. Pulls from the database
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    @IBAction func segmentedControlToggled(_ sender: Any) {
     }
     
     @IBOutlet weak var tableView: UITableView!

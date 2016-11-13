@@ -17,7 +17,19 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func importPhotoButtonPressed(_ sender: Any) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
         
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            postImageView.contentMode = .scaleAspectFit
+            postImageView.image = pickedImage
+        }
+    
+        dismiss(animated: true, completion: nil)
     }
     
     let imagePicker = UIImagePickerController()
