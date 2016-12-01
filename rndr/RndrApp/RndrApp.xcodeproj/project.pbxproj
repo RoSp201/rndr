@@ -32,6 +32,9 @@
 		3D09A4D41DD87E1F0062D4F5 /* ExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09A4D31DD87E1F0062D4F5 /* ExplorerViewController.swift */; };
 		6A98A06A1DF00F70009B1C5D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A98A0691DF00F70009B1C5D /* UIView.swift */; };
 		6AB4051C1DEE13E000E4379D /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB4051B1DEE13E000E4379D /* CreateViewController.swift */; };
+		6AD052801DF0A6FE00DCBD5E /* defaultphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AD0527F1DF0A6FE00DCBD5E /* defaultphoto.png */; };
+		6AD052811DF0A6FE00DCBD5E /* defaultphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AD0527F1DF0A6FE00DCBD5E /* defaultphoto.png */; };
+		6AD052821DF0A6FE00DCBD5E /* defaultphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AD0527F1DF0A6FE00DCBD5E /* defaultphoto.png */; };
 		6DFCEE645EDB6C1BDC8A996E /* Pods_RndrAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A223BC9562893B5C56D6EB8 /* Pods_RndrAppUITests.framework */; };
 		6E0C69926A340DE4E6B3A033 /* Pods_RndrApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A28E147F2B7869286BD938C /* Pods_RndrApp.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +89,7 @@
 		3D09A4D31DD87E1F0062D4F5 /* ExplorerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplorerViewController.swift; sourceTree = "<group>"; };
 		6A98A0691DF00F70009B1C5D /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		6AB4051B1DEE13E000E4379D /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateViewController.swift; path = ../CreateViewController.swift; sourceTree = "<group>"; };
+		6AD0527F1DF0A6FE00DCBD5E /* defaultphoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultphoto.png; sourceTree = "<group>"; };
 		79A86E48C7A913AFE4D4CF36 /* Pods_RndrAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RndrAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05872F351B1BB8ED8EFA53A /* Pods-RndrAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RndrAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RndrAppTests/Pods-RndrAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4FE9E35FF76DC9B5579D2D7 /* Pods-RndrAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RndrAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RndrAppUITests/Pods-RndrAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 				3D09A4BF1DD7DCBC0062D4F5 /* DataManager.swift */,
 				3D09A4BD1DD7DC2C0062D4F5 /* Post.swift */,
 				3D09A4761DD7A93C0062D4F5 /* Assets.xcassets */,
+				6AD0527F1DF0A6FE00DCBD5E /* defaultphoto.png */,
 				3D09A4BB1DD7D2B00062D4F5 /* trending_png.png */,
 				3D09A4AD1DD7B6D00062D4F5 /* sign.png */,
 				3D09A4A91DD7B2BD0062D4F5 /* trending.jpeg */,
@@ -337,6 +342,7 @@
 				3D09A4751DD7A93C0062D4F5 /* Main.storyboard in Resources */,
 				3D09A4AA1DD7B2BD0062D4F5 /* trending.jpeg in Resources */,
 				3D09A4C61DD823760062D4F5 /* GoogleService-Info.plist in Resources */,
+				6AD052801DF0A6FE00DCBD5E /* defaultphoto.png in Resources */,
 				3D09A4AC1DD7B2C50062D4F5 /* friends.png in Resources */,
 				3D09A4BC1DD7D2B00062D4F5 /* trending_png.png in Resources */,
 			);
@@ -346,6 +352,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AD052811DF0A6FE00DCBD5E /* defaultphoto.png in Resources */,
 				3D09A4C71DD823760062D4F5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AD052821DF0A6FE00DCBD5E /* defaultphoto.png in Resources */,
 				3D09A4C81DD823760062D4F5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

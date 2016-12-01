@@ -14,20 +14,37 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
     // MARK: Properties
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var postTextField: UITextView!
-    //let imagePicker = UIImagePickerController()
-
     @IBOutlet weak var stackview: UIStackView!
-    @IBAction func postButtonPressed(_ sender: Any) {
-        //let dataManager = DataManager()
-        //dataManager.changeMetadataAsync(newMetadata: "1")
-        print("Post button pushed. This is for debugging.")
+    
+    var imagePicker = UIImagePickerController()
+    var edits = false
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        imagePicker.delegate = self
+        postTextField.delegate = self
+        registerForKeyboardNotifications()
+        let tapRecognizer = UITapGestureRecognizer()
+        tapRecognizer.addTarget(self, action: #selector(CreateViewController.didTapView))
+        self.view.addGestureRecognizer(tapRecognizer)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //registerForKeyboardNotifications()
     }
     
     // MARK: Keyboard handler
     func registerForKeyboardNotifications(){
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWasShown), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-
+        
     }
     
     func deregisterFromKeyboardNotifications(){
@@ -36,13 +53,13 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    func keyboardWasShown(_ notification: NSNotification){
+    func keyboardWasShown(notification: NSNotification){
         //Need to calculate keyboard exact size due to Apple suggestions
+        edits = true
         print("[RNDR]: SHOWN KEYBOARD ")
         var info = notification.userInfo!
         let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
-        //print(String(describing: keyboardSize))
-        let delta = keyboardSize!.height - 120
+        let delta = keyboardSize!.height - 150
         let oframe = self.stackview.frame
         self.stackview.frame = CGRect(x: oframe.minX, y: oframe.minY - delta, width: oframe.width, height: oframe.height)
     }
@@ -53,14 +70,17 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.view.endEditing(true)
         var info = notification.userInfo!
         let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
-        print(String(describing: keyboardSize))
-        let delta = keyboardSize!.height - 120
+        let delta = keyboardSize!.height - 150
         let oframe = self.stackview.frame
         self.stackview.frame = CGRect(x: oframe.minX, y: oframe.minY + delta, width: oframe.width, height: oframe.height)
     }
     
     func didTapView(){
-        self.view.endEditing(true)
+        if edits == true {
+            self.view.endEditing(true)
+            print("clicked out of keyboard")
+            edits = false
+        }
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -77,8 +97,16 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
-        self.view.endEditing(true)
-        print("return")
+        print(textView.text)
+        print("textViewDidEndEditing")
+    }
+    
+    // MARK: Actions
+    
+    @IBAction func postButtonPressed(_ sender: Any) {
+        //let dataManager = DataManager()
+        //dataManager.changeMetadataAsync(newMetadata: "1")
+        print("Post button pushed. This is for debugging.")
     }
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
@@ -89,7 +117,6 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBAction func letdataManagerDataManagerpostButtonPressed(_ sender: Any) {
     }
-    var imagePicker = UIImagePickerController()
     
     @IBAction func importPhotoButtonPressed(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
@@ -98,22 +125,8 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
             self.present(imagePicker, animated: true, completion: nil)
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        imagePicker.delegate = self
-        postTextField.delegate = self
-        registerForKeyboardNotifications()
-        let tapRecognizer = UITapGestureRecognizer()
-        tapRecognizer.addTarget(self, action: #selector(CreateViewController.didTapView))
-        self.view.addGestureRecognizer(tapRecognizer)
-        
-        
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        //registerForKeyboardNotifications()
-    }
+
+    // MARK: Image Picker
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
     }
@@ -127,17 +140,9 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
         dismiss(animated: true, completion: nil)
         print((info))
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    
 
     
-
+    
     /*
     // MARK: - Navigation
 
