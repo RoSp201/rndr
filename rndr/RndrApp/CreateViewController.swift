@@ -56,7 +56,7 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
     func keyboardWasShown(notification: NSNotification){
         //Need to calculate keyboard exact size due to Apple suggestions
         edits = true
-        print("[RNDR]: SHOWN KEYBOARD ")
+        print("\nKeyboard was shown.\n")
         var info = notification.userInfo!
         let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue.size
         let delta = keyboardSize!.height - 150
