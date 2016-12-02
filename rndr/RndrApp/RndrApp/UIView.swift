@@ -1,6 +1,7 @@
 //
 //  UIButton.swift
 //  Used for implementing rounded edges and border colors for buttons in UI
+//  Created by Robert Spark on 11/30/16.
 //
 //  Copyright © 2016 Robert Spark. All rights reserved.
 //

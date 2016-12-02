@@ -16,13 +16,11 @@
 		3D09A4901DD7A93C0062D4F5 /* RndrAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09A48F1DD7A93C0062D4F5 /* RndrAppUITests.swift */; };
 		3D09A4A01DD7A9D60062D4F5 /* build in Resources */ = {isa = PBXBuildFile; fileRef = 3D09A49F1DD7A9D60062D4F5 /* build */; };
 		3D09A4A21DD7ABEB0062D4F5 /* VuforiaSamples-6-0-120 in Resources */ = {isa = PBXBuildFile; fileRef = 3D09A4A11DD7ABEB0062D4F5 /* VuforiaSamples-6-0-120 */; };
-		3D09A4AA1DD7B2BD0062D4F5 /* trending.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3D09A4A91DD7B2BD0062D4F5 /* trending.jpeg */; };
 		3D09A4AC1DD7B2C50062D4F5 /* friends.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D09A4AB1DD7B2C50062D4F5 /* friends.png */; };
 		3D09A4AE1DD7B6D00062D4F5 /* sign.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D09A4AD1DD7B6D00062D4F5 /* sign.png */; };
 		3D09A4B01DD7B97F0062D4F5 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09A4AF1DD7B97F0062D4F5 /* MainTabBarController.swift */; };
 		3D09A4B81DD7BB720062D4F5 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09A4B71DD7BB720062D4F5 /* ExploreViewController.swift */; };
 		3D09A4BA1DD7CD600062D4F5 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09A4B91DD7CD600062D4F5 /* StatusViewController.swift */; };
-		3D09A4BC1DD7D2B00062D4F5 /* trending_png.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D09A4BB1DD7D2B00062D4F5 /* trending_png.png */; };
 		3D09A4BE1DD7DC2C0062D4F5 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09A4BD1DD7DC2C0062D4F5 /* Post.swift */; };
 		3D09A4C01DD7DCBC0062D4F5 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09A4BF1DD7DCBC0062D4F5 /* DataManager.swift */; };
 		3D09A4C41DD8023A0062D4F5 /* StatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09A4C31DD8023A0062D4F5 /* StatusTableViewCell.swift */; };
@@ -30,6 +28,12 @@
 		3D09A4C71DD823760062D4F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D09A4C51DD823760062D4F5 /* GoogleService-Info.plist */; };
 		3D09A4C81DD823760062D4F5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D09A4C51DD823760062D4F5 /* GoogleService-Info.plist */; };
 		3D09A4D41DD87E1F0062D4F5 /* ExplorerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09A4D31DD87E1F0062D4F5 /* ExplorerViewController.swift */; };
+		6A19546B1DF1266500CFC571 /* ViewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A19546A1DF1266500CFC571 /* ViewPostViewController.swift */; };
+		6A19546C1DF1266500CFC571 /* ViewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A19546A1DF1266500CFC571 /* ViewPostViewController.swift */; };
+		6A19546D1DF1266500CFC571 /* ViewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A19546A1DF1266500CFC571 /* ViewPostViewController.swift */; };
+		6A19546F1DF1328300CFC571 /* trending_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A19546E1DF1328300CFC571 /* trending_icon.png */; };
+		6A1954701DF1328300CFC571 /* trending_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A19546E1DF1328300CFC571 /* trending_icon.png */; };
+		6A1954711DF1328300CFC571 /* trending_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A19546E1DF1328300CFC571 /* trending_icon.png */; };
 		6A98A06A1DF00F70009B1C5D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A98A0691DF00F70009B1C5D /* UIView.swift */; };
 		6AB4051C1DEE13E000E4379D /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB4051B1DEE13E000E4379D /* CreateViewController.swift */; };
 		6AD052801DF0A6FE00DCBD5E /* defaultphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AD0527F1DF0A6FE00DCBD5E /* defaultphoto.png */; };
@@ -75,18 +79,18 @@
 		3D09A4911DD7A93C0062D4F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D09A49F1DD7A9D60062D4F5 /* build */ = {isa = PBXFileReference; lastKnownFileType = folder; path = build; sourceTree = "<group>"; };
 		3D09A4A11DD7ABEB0062D4F5 /* VuforiaSamples-6-0-120 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "VuforiaSamples-6-0-120"; sourceTree = "<group>"; };
-		3D09A4A91DD7B2BD0062D4F5 /* trending.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trending.jpeg; sourceTree = "<group>"; };
 		3D09A4AB1DD7B2C50062D4F5 /* friends.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = friends.png; sourceTree = "<group>"; };
 		3D09A4AD1DD7B6D00062D4F5 /* sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sign.png; sourceTree = "<group>"; };
 		3D09A4AF1DD7B97F0062D4F5 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarController.swift; path = ../MainTabBarController.swift; sourceTree = "<group>"; };
 		3D09A4B71DD7BB720062D4F5 /* ExploreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExploreViewController.swift; path = ../ExploreViewController.swift; sourceTree = "<group>"; };
 		3D09A4B91DD7CD600062D4F5 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusViewController.swift; path = ../StatusViewController.swift; sourceTree = "<group>"; };
-		3D09A4BB1DD7D2B00062D4F5 /* trending_png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trending_png.png; sourceTree = "<group>"; };
 		3D09A4BD1DD7DC2C0062D4F5 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		3D09A4BF1DD7DCBC0062D4F5 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		3D09A4C31DD8023A0062D4F5 /* StatusTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StatusTableViewCell.swift; path = ../StatusTableViewCell.swift; sourceTree = "<group>"; };
 		3D09A4C51DD823760062D4F5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3D09A4D31DD87E1F0062D4F5 /* ExplorerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplorerViewController.swift; sourceTree = "<group>"; };
+		6A19546A1DF1266500CFC571 /* ViewPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPostViewController.swift; sourceTree = "<group>"; };
+		6A19546E1DF1328300CFC571 /* trending_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trending_icon.png; sourceTree = "<group>"; };
 		6A98A0691DF00F70009B1C5D /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		6AB4051B1DEE13E000E4379D /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateViewController.swift; path = ../CreateViewController.swift; sourceTree = "<group>"; };
 		6AD0527F1DF0A6FE00DCBD5E /* defaultphoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultphoto.png; sourceTree = "<group>"; };
@@ -160,14 +164,14 @@
 				3D09A46D1DD7A93C0062D4F5 /* AppDelegate.swift */,
 				6AB4051B1DEE13E000E4379D /* CreateViewController.swift */,
 				3D09A4731DD7A93C0062D4F5 /* Main.storyboard */,
+				6A19546A1DF1266500CFC571 /* ViewPostViewController.swift */,
 				6A98A0691DF00F70009B1C5D /* UIView.swift */,
 				3D09A4BF1DD7DCBC0062D4F5 /* DataManager.swift */,
 				3D09A4BD1DD7DC2C0062D4F5 /* Post.swift */,
 				3D09A4761DD7A93C0062D4F5 /* Assets.xcassets */,
 				6AD0527F1DF0A6FE00DCBD5E /* defaultphoto.png */,
-				3D09A4BB1DD7D2B00062D4F5 /* trending_png.png */,
+				6A19546E1DF1328300CFC571 /* trending_icon.png */,
 				3D09A4AD1DD7B6D00062D4F5 /* sign.png */,
-				3D09A4A91DD7B2BD0062D4F5 /* trending.jpeg */,
 				3D09A4AB1DD7B2C50062D4F5 /* friends.png */,
 				3D09A4781DD7A93C0062D4F5 /* LaunchScreen.storyboard */,
 				3D09A47B1DD7A93C0062D4F5 /* Info.plist */,
@@ -334,17 +338,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A19546F1DF1328300CFC571 /* trending_icon.png in Resources */,
 				3D09A4AE1DD7B6D00062D4F5 /* sign.png in Resources */,
 				3D09A47A1DD7A93C0062D4F5 /* LaunchScreen.storyboard in Resources */,
 				3D09A4A21DD7ABEB0062D4F5 /* VuforiaSamples-6-0-120 in Resources */,
 				3D09A4A01DD7A9D60062D4F5 /* build in Resources */,
 				3D09A4771DD7A93C0062D4F5 /* Assets.xcassets in Resources */,
 				3D09A4751DD7A93C0062D4F5 /* Main.storyboard in Resources */,
-				3D09A4AA1DD7B2BD0062D4F5 /* trending.jpeg in Resources */,
 				3D09A4C61DD823760062D4F5 /* GoogleService-Info.plist in Resources */,
 				6AD052801DF0A6FE00DCBD5E /* defaultphoto.png in Resources */,
 				3D09A4AC1DD7B2C50062D4F5 /* friends.png in Resources */,
-				3D09A4BC1DD7D2B00062D4F5 /* trending_png.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AD052811DF0A6FE00DCBD5E /* defaultphoto.png in Resources */,
+				6A1954701DF1328300CFC571 /* trending_icon.png in Resources */,
 				3D09A4C71DD823760062D4F5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AD052821DF0A6FE00DCBD5E /* defaultphoto.png in Resources */,
+				6A1954711DF1328300CFC571 /* trending_icon.png in Resources */,
 				3D09A4C81DD823760062D4F5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,6 +526,7 @@
 				3D09A46E1DD7A93C0062D4F5 /* AppDelegate.swift in Sources */,
 				3D09A4D41DD87E1F0062D4F5 /* ExplorerViewController.swift in Sources */,
 				3D09A4BA1DD7CD600062D4F5 /* StatusViewController.swift in Sources */,
+				6A19546B1DF1266500CFC571 /* ViewPostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +535,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D09A4851DD7A93C0062D4F5 /* RndrAppTests.swift in Sources */,
+				6A19546C1DF1266500CFC571 /* ViewPostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -537,6 +544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D09A4901DD7A93C0062D4F5 /* RndrAppUITests.swift in Sources */,
+				6A19546D1DF1266500CFC571 /* ViewPostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
