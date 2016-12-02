@@ -34,6 +34,9 @@
 		6A19546F1DF1328300CFC571 /* trending_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A19546E1DF1328300CFC571 /* trending_icon.png */; };
 		6A1954701DF1328300CFC571 /* trending_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A19546E1DF1328300CFC571 /* trending_icon.png */; };
 		6A1954711DF1328300CFC571 /* trending_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A19546E1DF1328300CFC571 /* trending_icon.png */; };
+		6A19547B1DF21FB200CFC571 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A19547A1DF21FB200CFC571 /* star.png */; };
+		6A19547C1DF21FB200CFC571 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A19547A1DF21FB200CFC571 /* star.png */; };
+		6A19547D1DF21FB200CFC571 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A19547A1DF21FB200CFC571 /* star.png */; };
 		6A98A06A1DF00F70009B1C5D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A98A0691DF00F70009B1C5D /* UIView.swift */; };
 		6AB4051C1DEE13E000E4379D /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB4051B1DEE13E000E4379D /* CreateViewController.swift */; };
 		6AD052801DF0A6FE00DCBD5E /* defaultphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 6AD0527F1DF0A6FE00DCBD5E /* defaultphoto.png */; };
@@ -91,6 +94,7 @@
 		3D09A4D31DD87E1F0062D4F5 /* ExplorerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplorerViewController.swift; sourceTree = "<group>"; };
 		6A19546A1DF1266500CFC571 /* ViewPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPostViewController.swift; sourceTree = "<group>"; };
 		6A19546E1DF1328300CFC571 /* trending_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trending_icon.png; sourceTree = "<group>"; };
+		6A19547A1DF21FB200CFC571 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		6A98A0691DF00F70009B1C5D /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		6AB4051B1DEE13E000E4379D /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateViewController.swift; path = ../CreateViewController.swift; sourceTree = "<group>"; };
 		6AD0527F1DF0A6FE00DCBD5E /* defaultphoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = defaultphoto.png; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 				3D09A4BD1DD7DC2C0062D4F5 /* Post.swift */,
 				3D09A4761DD7A93C0062D4F5 /* Assets.xcassets */,
 				6AD0527F1DF0A6FE00DCBD5E /* defaultphoto.png */,
+				6A19547A1DF21FB200CFC571 /* star.png */,
 				6A19546E1DF1328300CFC571 /* trending_icon.png */,
 				3D09A4AD1DD7B6D00062D4F5 /* sign.png */,
 				3D09A4AB1DD7B2C50062D4F5 /* friends.png */,
@@ -347,6 +352,7 @@
 				3D09A4751DD7A93C0062D4F5 /* Main.storyboard in Resources */,
 				3D09A4C61DD823760062D4F5 /* GoogleService-Info.plist in Resources */,
 				6AD052801DF0A6FE00DCBD5E /* defaultphoto.png in Resources */,
+				6A19547B1DF21FB200CFC571 /* star.png in Resources */,
 				3D09A4AC1DD7B2C50062D4F5 /* friends.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AD052811DF0A6FE00DCBD5E /* defaultphoto.png in Resources */,
+				6A19547C1DF21FB200CFC571 /* star.png in Resources */,
 				6A1954701DF1328300CFC571 /* trending_icon.png in Resources */,
 				3D09A4C71DD823760062D4F5 /* GoogleService-Info.plist in Resources */,
 			);
@@ -366,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6AD052821DF0A6FE00DCBD5E /* defaultphoto.png in Resources */,
+				6A19547D1DF21FB200CFC571 /* star.png in Resources */,
 				6A1954711DF1328300CFC571 /* trending_icon.png in Resources */,
 				3D09A4C81DD823760062D4F5 /* GoogleService-Info.plist in Resources */,
 			);

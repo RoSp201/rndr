@@ -18,6 +18,8 @@ class StatusTableViewCell: UITableViewCell {
     
     @IBOutlet weak var friendsCellImage: UIImageView!
     
+    var favorite = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
