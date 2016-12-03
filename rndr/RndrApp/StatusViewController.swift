@@ -2,8 +2,7 @@
 //  StatusViewController.swift
 //  RndrApp
 //
-//  Created by William Smith on 11/12/16.
-//  Modified by Robert Spark on 12/1/16.
+//  Created by William Smith and Robert Spark on 11/12/16.
 //  Copyright © 2016 William Smith and Robert Spark. All rights reserved.
 //
 
@@ -70,7 +69,7 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
             print("Favorite button tapped")
 
             if !cell.favorite && !(list?[indexPath.row].favorite)! {
-                cell.trendingCellIcon.image = UIImage(named: "star.png")
+                cell.trendingCellIcon.image = UIImage(named: "yellow_star.png")
                 list?[indexPath.row].favorite = true
                 cell.favorite = true
             }
@@ -85,7 +84,7 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
         favorite.backgroundColor = UIColor.orange
     
         //remove button actions
-        let remove = UITableViewRowAction(style: .normal, title: "Remove") { action, index in
+        let remove = UITableViewRowAction(style: .normal, title: "Delete") { action, index in
             print("Remove Post button tapped")
             if self.trendingSelected {
                 self.updates.remove(at: indexPath.row)
@@ -150,7 +149,7 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
             currentUpdate = savedPosts[indexPath.row]
         }
         if currentUpdate.favorite {
-            cell.trendingCellIcon.image = UIImage(named: "star.png")
+            cell.trendingCellIcon.image = UIImage(named: "yellow_star.png")
         }
         cell.trendingCellTextField.text = "\(currentUpdate.name) made a post \(currentUpdate.distance) miles from you."
         return cell

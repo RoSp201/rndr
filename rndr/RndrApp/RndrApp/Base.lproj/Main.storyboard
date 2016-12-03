@@ -130,8 +130,8 @@
                             <constraint firstAttribute="trailingMargin" secondItem="0z1-BL-hw8" secondAttribute="trailing" constant="34" id="xuO-ZR-Dt8"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Discover" id="UCq-h6-27L">
-                        <inset key="imageInsets" minX="0.0" minY="-7" maxX="0.0" maxY="0.0"/>
+                    <tabBarItem key="tabBarItem" title="Discover" image="discover_tab.png" id="UCq-h6-27L">
+                        <inset key="imageInsets" minX="-2" minY="-2" maxX="-2" maxY="-2"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="segmentedControl" destination="ekY-IE-pzp" id="UJY-h7-PlK"/>
@@ -310,7 +310,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="6Oi-yK-uac" secondAttribute="trailing" constant="10" id="tPv-K2-C36"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Create Post" id="f46-wu-q5w"/>
+                    <tabBarItem key="tabBarItem" title="Create Post" image="create_post.png" id="f46-wu-q5w">
+                        <inset key="imageInsets" minX="-1" minY="-2" maxX="-2" maxY="-2"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="postImageView" destination="QQS-r5-mFe" id="IgZ-Tr-4ae"/>
                         <outlet property="postTextField" destination="t8L-Sk-ZIE" id="4YB-qa-S3T"/>
@@ -334,7 +336,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Explore" id="bG8-76-LUa"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="explore_tab.png" id="bG8-76-LUa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VmY-gZ-b3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -343,6 +345,9 @@
     </scenes>
     <resources>
         <image name="camera" width="48" height="48"/>
+        <image name="create_post.png" width="25" height="19"/>
         <image name="defaultphoto.png" width="615" height="616"/>
+        <image name="discover_tab.png" width="25" height="25"/>
+        <image name="explore_tab.png" width="25" height="25"/>
     </resources>
 </document>
