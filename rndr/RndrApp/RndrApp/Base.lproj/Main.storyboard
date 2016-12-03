@@ -67,9 +67,10 @@
                                 <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tfm-dV-fiI">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tfm-dV-fiI">
                                 <rect key="frame" x="0.0" y="130" width="375" height="488"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="trendingCell" rowHeight="60" id="Xll-Cc-BWg" customClass="StatusTableViewCell" customModule="RndrApp">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
@@ -160,7 +161,7 @@
             </objects>
             <point key="canvasLocation" x="2100" y="-683"/>
         </scene>
-        <!--Create Post-->
+        <!--Create-->
         <scene sceneID="rCL-w3-kqC">
             <objects>
                 <viewController id="qCw-lh-mGE" customClass="CreateViewController" customModule="RndrApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -243,11 +244,16 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="QQS-r5-mFe" firstAttribute="top" secondItem="T0s-lf-I5y" secondAttribute="bottom" constant="8" id="4zP-t9-4sT"/>
-                                    <constraint firstAttribute="trailing" secondItem="NdH-7i-jd4" secondAttribute="trailing" constant="97" id="G3b-d5-rog"/>
+                                    <constraint firstItem="T0s-lf-I5y" firstAttribute="leading" secondItem="6Oi-yK-uac" secondAttribute="leading" id="Fdo-SG-nSf"/>
+                                    <constraint firstItem="T0s-lf-I5y" firstAttribute="top" secondItem="6Oi-yK-uac" secondAttribute="top" constant="38" id="KWc-aX-v0Z"/>
+                                    <constraint firstItem="NdH-7i-jd4" firstAttribute="top" secondItem="6Oi-yK-uac" secondAttribute="top" id="OEd-P7-n1y"/>
                                     <constraint firstItem="QQS-r5-mFe" firstAttribute="leading" secondItem="tX1-25-hEF" secondAttribute="trailing" constant="-185" id="OU8-nz-245"/>
+                                    <constraint firstAttribute="trailing" secondItem="T0s-lf-I5y" secondAttribute="trailing" id="WJL-tZ-keY"/>
                                     <constraint firstItem="T0s-lf-I5y" firstAttribute="leading" secondItem="QQS-r5-mFe" secondAttribute="leading" id="aj3-fb-mqY"/>
+                                    <constraint firstItem="T0s-lf-I5y" firstAttribute="top" secondItem="NdH-7i-jd4" secondAttribute="bottom" constant="8" id="dTw-M6-7Fx"/>
                                     <constraint firstItem="tX1-25-hEF" firstAttribute="top" secondItem="QQS-r5-mFe" secondAttribute="bottom" constant="8" id="iCe-Gd-key"/>
-                                    <constraint firstItem="NdH-7i-jd4" firstAttribute="leading" secondItem="6Oi-yK-uac" secondAttribute="leading" constant="97" id="nne-jh-Ohj"/>
+                                    <constraint firstAttribute="trailing" secondItem="NdH-7i-jd4" secondAttribute="trailing" constant="97" id="ldK-vU-rug"/>
+                                    <constraint firstItem="NdH-7i-jd4" firstAttribute="leading" secondItem="6Oi-yK-uac" secondAttribute="leading" constant="97" id="ooW-QL-OG2"/>
                                     <constraint firstItem="QQS-r5-mFe" firstAttribute="leading" secondItem="t8L-Sk-ZIE" secondAttribute="leading" id="sVg-wO-nLr"/>
                                 </constraints>
                             </stackView>
@@ -293,7 +299,6 @@
                             <constraint firstItem="nvY-Cx-Vql" firstAttribute="height" secondItem="i5V-8v-kPa" secondAttribute="height" id="Kau-O4-Oi5"/>
                             <constraint firstItem="i5V-8v-kPa" firstAttribute="top" secondItem="6Oi-yK-uac" secondAttribute="bottom" constant="48" id="P7P-PS-Vmf"/>
                             <constraint firstItem="QQS-r5-mFe" firstAttribute="leading" secondItem="ZhB-A1-UE7" secondAttribute="leadingMargin" constant="10" id="X6V-EM-UbT"/>
-                            <constraint firstItem="Gpn-BO-utS" firstAttribute="top" secondItem="NdH-7i-jd4" secondAttribute="bottom" constant="547" id="Xjp-zy-tqU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QQS-r5-mFe" secondAttribute="trailing" constant="10" id="ZWQ-GP-jvg"/>
                             <constraint firstItem="Gpn-BO-utS" firstAttribute="top" secondItem="i5V-8v-kPa" secondAttribute="bottom" constant="26" id="akG-3w-YeT"/>
                             <constraint firstItem="6Oi-yK-uac" firstAttribute="leading" secondItem="ZhB-A1-UE7" secondAttribute="leadingMargin" constant="10" id="bFQ-6q-8X9"/>
@@ -310,10 +315,11 @@
                             <constraint firstAttribute="trailingMargin" secondItem="6Oi-yK-uac" secondAttribute="trailing" constant="10" id="tPv-K2-C36"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Create Post" image="create_post.png" id="f46-wu-q5w">
+                    <tabBarItem key="tabBarItem" title="Create" image="create_post.png" id="f46-wu-q5w">
                         <inset key="imageInsets" minX="-1" minY="-2" maxX="-2" maxY="-2"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="contentSegmentController" destination="T0s-lf-I5y" id="HQC-I6-BU6"/>
                         <outlet property="postImageView" destination="QQS-r5-mFe" id="IgZ-Tr-4ae"/>
                         <outlet property="postTextField" destination="t8L-Sk-ZIE" id="4YB-qa-S3T"/>
                         <outlet property="stackview" destination="6Oi-yK-uac" id="bwn-td-y4K"/>

@@ -15,6 +15,7 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var postTextField: UITextView!
     @IBOutlet weak var stackview: UIStackView!
+    @IBOutlet weak var contentSegmentController: UISegmentedControl!
     
     var imagePicker = UIImagePickerController()
     var edits = false
@@ -28,6 +29,11 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
         let tapRecognizer = UITapGestureRecognizer()
         tapRecognizer.addTarget(self, action: #selector(CreateViewController.didTapView))
         self.view.addGestureRecognizer(tapRecognizer)
+        self.contentSegmentController.setTitle("Camera Roll", forSegmentAt: 0)
+        self.contentSegmentController.setTitle("GIF", forSegmentAt: 1)
+        self.contentSegmentController.setTitle("Object", forSegmentAt: 2)
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
