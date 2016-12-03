@@ -14,9 +14,9 @@ class StatusTableViewCell: UITableViewCell {
     
     @IBOutlet weak var trendingCellIcon: UIImageView!
     
-    @IBOutlet weak var friendsCellTextField: UILabel!
+    //@IBOutlet weak var friendsCellTextField: UILabel!
     
-    @IBOutlet weak var friendsCellImage: UIImageView!
+    //@IBOutlet weak var friendsCellImage: UIImageView!
     
     var favorite = false
     

@@ -12,6 +12,7 @@ import UIKit
 class Update {
     var name : String = ""
     var distance : Double = 1.0
+    var favorite = false
     
     init(name : String, distance : Double) {
         self.name = name
@@ -25,7 +26,6 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var trendingSelected = true
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    var fav = false
     
     
     //some sample data to populate the tableview
@@ -47,49 +47,75 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
 
     //give options when swiping to the side on a UItableViewCell
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let save = UITableViewRowAction(style: .normal, title: "Save") { action, index in
-            print("Save button tapped, moved obj to saved list")
-            self.savedPosts.append(self.updates.remove(at: indexPath.row))
-            self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
-            
-        }
-        save.backgroundColor = UIColor.lightGray
+        
         let cell = self.tableView.cellForRow(at: indexPath) as! StatusTableViewCell
         var title = ""
-        if cell.favorite {
+        var list:[Update]?
+        
+        if self.trendingSelected {
+            list = updates
+        } else {
+            list = savedPosts
+        }
+        
+        if (list?[indexPath.row].favorite)! {
             title = "Uncheck"
         } else {
             title = "Favorite"
         }
         
+        //favorite button actions
         let favorite = UITableViewRowAction(style: .normal, title: title) { action, index in
-            print("Favorite button tapped")
-            //let identifier = self.tableView.ide
-            //let cell = self.tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! StatusTableViewCell
             
-            if cell.favorite == false {
+            print("Favorite button tapped")
+
+            if !cell.favorite && !(list?[indexPath.row].favorite)! {
                 cell.trendingCellIcon.image = UIImage(named: "star.png")
+                list?[indexPath.row].favorite = true
                 cell.favorite = true
             }
-            else {
-                cell.trendingCellIcon.image = UIImage(named: "sign.png")
+            else
+            {
+                list?[indexPath.row].favorite = false
                 cell.favorite = false
+                cell.trendingCellIcon.image = nil
             }
             self.tableView.reloadData()
         }
         favorite.backgroundColor = UIColor.orange
     
-        
+        //remove button actions
         let remove = UITableViewRowAction(style: .normal, title: "Remove") { action, index in
             print("Remove Post button tapped")
-            self.updates.remove(at: indexPath.row)
+            if self.trendingSelected {
+                self.updates.remove(at: indexPath.row)
+            } else {
+                self.savedPosts.remove(at: indexPath.row)
+            }
             self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
         }
         remove.backgroundColor = UIColor.red
         
-        return [remove, favorite, save]
+        //save button actions (only for trending tableview)
+        let save = UITableViewRowAction(style: .normal, title: "Save") { action, index in
+            print("Save button tapped, moved obj to saved list")
+            self.savedPosts.append(self.updates.remove(at: indexPath.row))
+            self.tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+                
+        }
+        save.backgroundColor = UIColor.lightGray
+        
+        if trendingSelected {
+            return [remove, favorite, save]
+        } else {
+            return [remove, favorite]
+        }
     }
     
+    
+    
+    
+    // MARK: TableView Functions
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // the cells you would like the actions to appear for needs to be editable
         return true
@@ -99,12 +125,15 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
         // you need to implement this method too or you can't swipe to display the actions
     }
     
-    // MARK: TableViewController functions
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return updates.count
+        if trendingSelected {
+            return updates.count
+        } else {
+            return savedPosts.count
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -113,32 +142,17 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var identifier : String
-        var cell : StatusTableViewCell
-        let currentUpdate = updates[indexPath.row]
-        
-        if trendingSelected {
-            identifier = "trendingCell"
-            cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! StatusTableViewCell
-            if cell.favorite == false {
-                cell.trendingCellIcon.image = UIImage(named: "sign.png")
-            }
-            
-            cell.trendingCellTextField.text = "\(currentUpdate.name) made a post \(currentUpdate.distance) miles from you."
-            
-            //print(currentUpdate.name)
-            //print(currentUpdate.distance)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "trendingCell", for: indexPath) as! StatusTableViewCell
+        var currentUpdate = Update(name:"",distance:0)
+        if self.trendingSelected {
+            currentUpdate = updates[indexPath.row]
+        } else {
+            currentUpdate = savedPosts[indexPath.row]
         }
-        else
-        {
-            identifier = "friendsCell"
-            cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! StatusTableViewCell
-            cell.friendsCellImage.image = UIImage(named: "friends.png")
-            cell.friendsCellTextField.text = "\(currentUpdate.name) made a post \(currentUpdate.distance) from you."
-            
-            //print(currentUpdate.name)
-            //print(currentUpdate.distance)
+        if currentUpdate.favorite {
+            cell.trendingCellIcon.image = UIImage(named: "star.png")
         }
+        cell.trendingCellTextField.text = "\(currentUpdate.name) made a post \(currentUpdate.distance) miles from you."
         return cell
     }
     
@@ -146,10 +160,10 @@ class StatusViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // MARK: Actions
     @IBAction func segmentedControlToggled(_ sender: Any) {
+        print("segmented button pressed.")
+        trendingSelected = !trendingSelected
+        self.tableView.reloadData()
     }
-    
-    
-    
     
     
     /*
